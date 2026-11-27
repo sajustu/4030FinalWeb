@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cell Behavior Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Explore Cell Behavior</h1>
+  <!-- add other two charts here -->
+  <section id="scatter-section">
+    <h2>Find unusual tracks</h2>
+    <label>Displacement threshold:
+      <input id="threshold" type="range" min="50" max="500" value="217.89" step="0.01">
+      <span id="threshold-value">218</span> px
+    </label>
+    <div id="scatterplot"></div>
+    <p class="note">Grey hexagons: unflagged tracks (darker = more tracks). Red dots: flagged tracks. Click a hexagon to list its tracks.</p>
+    <ul id="track-list"></ul>
+  </section>
+  <div id="tooltip"></div>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3-hexbin@0.2.2/build/d3-hexbin.min.js"></script>
+  <script src="js/scatterplot.js"></script>
+</body>
+</html>
